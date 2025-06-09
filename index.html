@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Professional portfolio of Samuel Serna Delgado, Java Backend and Fullstack developer from Medellín, Colombia. Specialized in SpringBoot, SQL and SCRUM methodologies.">
+    <title>My Portfolio | Samuel Serna Delgado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
+</head>
+<body>
+<!-- Loading Screen -->
+<div class="loading-screen">
+    <div class="loader">
+        <div class="loader-content">
+            <i class="fas fa-code"></i>
+            <span>Loading...</span>
+        </div>
+    </div>
+</div>
+
+<!-- Header de navegación principal -->
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Port<span>folio</span></a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Sección de presentación personal (Hero/About) -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>¡Hi! I'm <span>Samuel Serna Delgado</span></h1>
+                    <p>Java Backend and Fullstack developer from Medellín, Colombia, specializing in SpringBoot, SQL, and SCRUM. I'm passionate about creating robust software solutions and thrive in collaborative environments.</p>
+                    <div class="hero-btns">
+                        <a href="portfolio.html" class="btn">View Projects</a>
+                        <a href="contact.html" class="btn btn-outline">Contact</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/Sam-SSD" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/samuel-sd/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="hero-img">
+                    <img src="static/img/image-profile.jpg"
+                         alt="Profile picture of Samuel Serna Delgado, Java Backend and Fullstack developer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección About -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80"
+                         alt="Desarrollador trabajando con código en un escritorio con laptop y pantallas de código">
+                </div>
+                <div class="about-text">
+                    <h3>Java Backend & Fullstack Developer</h3>
+                    <p>As a specialized Java developer, I focus on building scalable and efficient backend solutions using SpringBoot. My expertise in SQL ensures robust database management, while my SCRUM knowledge enables effective project delivery and team collaboration.</p>
+                    <p>Based in Medellín, Colombia, I combine technical expertise with a collaborative mindset to create impactful software solutions that meet business needs and exceed client expectations.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>samuserna2005@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+57 319 516 7662</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Medellín, Colombia</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Available for projects</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer global -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("7JKf9e5hLkbFcgg9V");
+    })();
+</script>
+<script src="static/js/index.js"></script>
+</body>
+</html>
