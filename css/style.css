@@ -57,46 +57,46 @@
 }
 
 :root {
-    /* Colores primarios */
+    /* Primary colors */
     --primary-color: #4a6cf7;
     --primary-light: #6b86f9;
     --primary-dark: #3a55d9;
 
-    /* Colores secundarios */
+    /* Secondary colors */
     --secondary-color: #6c757d;
     --secondary-light: #868e96;
     --secondary-dark: #495057;
 
-    /* Colores de fondo y texto */
+    /* Background and text colors */
     --dark-color: #1e293b;
     --dark-color-alt: #0f172a;
     --light-color: #f8f9fa;
     --light-color-alt: #e9ecef;
 
-    /* Colores de acento */
+    /* Accent colors */
     --accent-color: #ff6b6b;
     --accent-light: #ff8787;
     --accent-dark: #fa5252;
     --success-color: #40c057;
     --warning-color: #fab005;
 
-    /* Gradientes */
+    /* Gradients */
     --gradient-1: linear-gradient(135deg, #4a6cf7 0%, #6a11cb 100%);
     --gradient-2: linear-gradient(135deg, #ff6b6b 0%, #ff8b3d 100%);
 
-    /* Sombras y efectos */
+    /* Shadows and effects */
     --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --box-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.2);
     --transition: all 0.3s ease;
 
-    /* Espaciado */
+    /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
 
-    /* Bordes */
+    /* Borders */
     --border-radius-sm: 5px;
     --border-radius-md: 10px;
     --border-radius-lg: 15px;
@@ -157,13 +157,13 @@ img {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    /* Efecto de gradiente animado */
+    /* Animated gradient effect */
     background-size: 200% 200%;
     background-image: linear-gradient(45deg, var(--primary-color) 0%, var(--primary-dark) 25%, var(--primary-light) 50%, var(--primary-color) 100%);
     animation: gradientShift 3s ease infinite;
 }
 
-/* Animación para el gradiente desplazándose */
+/* Animation for the moving gradient */
 @keyframes gradientShift {
     0% {
         background-position: 0 50%;
@@ -178,7 +178,7 @@ img {
 
 .btn:hover {
     background: var(--dark-color);
-    /* Transformación: mover hacia arriba y escalar ligeramente */
+    /* Transform: Move up and scale slightly*/
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 8px 20px rgba(74, 108, 247, 0.4);
 }
@@ -210,11 +210,11 @@ img {
     font-size: 2.5rem;
     position: relative;
     display: inline-block;
-    /* Animación de entrada para los títulos de sección */
+    /* Entrance animation for section titles */
     animation: fadeInUp 1s ease-out;
 }
 
-/* Pseudoelemento ::before para título decorativo */
+/* ::before pseudo-element for decorative title */
 .section-title h2::before {
     content: '';
     position: absolute;
@@ -227,7 +227,7 @@ img {
     opacity: 0.6;
 }
 
-/* Pseudoelemento ::after para línea debajo del título */
+/* ::after pseudo-element for line below title */
 .section-title h2::after {
     content: '';
     position: absolute;
@@ -238,11 +238,11 @@ img {
     height: 4px;
     background: var(--gradient-1);
     border-radius: 2px;
-    /* Animación para la línea bajo el título */
+    /* Animation for the line under the title */
     animation: widthExpand 1.2s ease-out forwards;
 }
 
-/* Animación de entrada desde abajo */
+/* Entrance animation from below */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -254,7 +254,7 @@ img {
     }
 }
 
-/* Animación de expansión para la línea del título */
+/* Expanding animation for the title line */
 @keyframes widthExpand {
     from {
         width: 0;
@@ -328,17 +328,17 @@ img {
     user-select: none;
 }
 
-/* Pseudoclase :hover para enlaces de navegación */
+/* :hover pseudo-class for navigation links */
 .nav-links a:hover {
     color: var(--primary-color);
 }
 
-/* Pseudoclase :focus para navegación accesible */
+/* :focus pseudo-class for accessible navigation */
 .nav-links a:focus {
     outline: none;
 }
 
-/* Pseudoelemento ::after para efecto de subrayado */
+/* ::after pseudo-element for underline effect */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -352,12 +352,6 @@ img {
 
 .nav-links a:hover::after {
     width: 100%;
-}
-
-/* Pseudoclase :active para efecto de click */
-.nav-links a:active {
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 /* Hero Section */
@@ -450,6 +444,7 @@ img {
 
 /* About Section */
 .about {
+    min-height: 100vh;
     background-color: white;
 }
 
@@ -477,7 +472,7 @@ img {
     box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Pseudoelemento para efecto de marco decorativo */
+/* Pseudo element for decorative frame effect */
 .about-img::after {
     content: '';
     position: absolute;
@@ -535,10 +530,11 @@ img {
 
 /* Portfolio Section */
 .portfolio {
+    min-height: 100vh;
     background-color: #f5f8ff;
 }
 
-/* Estilos para la tabla de proyectos */
+/* Styles for the project table */
 .projects-table-container {
     margin-bottom: 3rem;
     overflow-x: auto;
@@ -551,10 +547,9 @@ img {
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    /* Efecto de profundidad con múltiples sombras */
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.1),
-        0 15px 35px rgba(74, 108, 247, 0.1);
+    /* Depth effect with multiple shadows */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(74, 108, 247, 0.1);
     /* Añadir un borde fino */
     border: 1px solid rgba(74, 108, 247, 0.1);
 }
@@ -579,7 +574,7 @@ img {
     border-bottom: none;
 }
 
-/* Pseudoclases para filas de tabla en hover */
+/* Pseudoclasses for table rows on hover */
 .projects-table tbody tr {
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
@@ -592,7 +587,7 @@ img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Añadir efecto de cebra con pseudoclase :nth-child */
+/* Add zebra effect with :nth-child pseudo-class */
 .projects-table tbody tr:nth-child(even) {
     background-color: rgba(74, 108, 247, 0.05);
 }
@@ -607,12 +602,12 @@ img {
 
 .table-link:hover {
     color: var(--dark-color);
-    /* Transformación al hacer hover */
+    /* Transformation on hover */
     transform: translateX(5px);
 }
 
 .table-link:hover i {
-    /* Transformación del ícono al hacer hover */
+    /* Icon transformation on hover */
     transform: rotate(45deg);
     transition: transform 0.3s ease;
 }
@@ -629,22 +624,22 @@ img {
     overflow: hidden;
     position: relative;
     box-shadow: var(--box-shadow);
-    /* Animación de entrada con retardo progresivo */
+    /* Entrance animation with progressive delay */
     animation: fadeIn 0.8s ease-out forwards;
     opacity: 0;
-    /* Habilitar transformaciones 3D */
+    /* Enable 3D transformations */
     transform-style: preserve-3d;
     perspective: 1000px;
     transition: transform 0.5s ease;
 }
 
-/* Efecto de tarjeta levantada en hover */
+/* Card raised effect on hover */
 .portfolio-item:hover {
     transform: translateY(-15px) rotateX(5deg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Asignar retardos diferentes a cada proyecto */
+/* Assign different delays to each project */
 .portfolio-item:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -657,7 +652,7 @@ img {
     animation-delay: 0.5s;
 }
 
-/* Animación de fundido para tarjetas de proyecto */
+/* Fade animation for project cards */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -697,7 +692,7 @@ img {
 }
 
 .portfolio-item:hover img {
-    /* Transformación avanzada en hover */
+    /* Advanced hover transformation */
     transform: scale(1.1) rotate(2deg);
     filter: brightness(0.7) blur(2px);
 }
@@ -733,11 +728,11 @@ img {
 .portfolio-links a:hover {
     background: var(--primary-color);
     color: white;
-    /* Animación de pulsación al hacer hover */
+    /* Hover animation */
     animation: pulse 1s infinite;
 }
 
-/* Animación de pulsación con @keyframes */
+/* Click animation with @keyframes */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -755,6 +750,7 @@ img {
 
 /* Contact Section */
 .contact {
+    min-height: 100vh;
     background-color: white;
 }
 
@@ -772,7 +768,7 @@ img {
 .contact-info h3 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    /* Animación de entrada */
+    /* Entry animation */
     animation: slideInLeft 0.8s ease-out forwards;
 }
 
@@ -780,9 +776,8 @@ img {
     background: var(--light-color);
     padding: 2.5rem;
     border-radius: var(--border-radius-lg);
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.1),
-        0 1px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+    0 1px 8px rgba(0, 0, 0, 0.05);
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -801,9 +796,8 @@ img {
 
 .contact-form:hover {
     transform: translateY(-5px);
-    box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.15),
-        0 1px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15),
+    0 1px 8px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form .form-group {
@@ -833,28 +827,25 @@ img {
     transition: all 0.3s ease;
     font-size: 1rem;
     font-family: inherit;
-    box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.05),
-        0 4px 8px rgba(0, 0, 0, 0.05),
-        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05),
+    0 4px 8px rgba(0, 0, 0, 0.05),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .contact-form .form-control:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 
-        0 4px 12px rgba(74, 108, 247, 0.15),
-        0 8px 24px rgba(74, 108, 247, 0.1),
-        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 12px rgba(74, 108, 247, 0.15),
+    0 8px 24px rgba(74, 108, 247, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
     transform: translateY(-2px);
 }
 
 .contact-form .form-control:hover {
     border-color: var(--primary-light);
-    box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.08),
-        0 8px 16px rgba(0, 0, 0, 0.08),
-        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
     transform: translateY(-1px);
 }
 
@@ -864,10 +855,9 @@ img {
 
 .contact-form .form-control:invalid:focus {
     border-color: var(--primary-color);
-    box-shadow: 
-        0 4px 12px rgba(74, 108, 247, 0.15),
-        0 8px 24px rgba(74, 108, 247, 0.1),
-        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 12px rgba(74, 108, 247, 0.15),
+    0 8px 24px rgba(74, 108, 247, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .contact-form .error-message {
@@ -895,7 +885,7 @@ img {
     border-radius: var(--border-radius-round);
     cursor: pointer;
     transition: all 0.3s ease;
-    /* Efecto de gradiente animado */
+    /* Animated gradient effect */
     background-size: 200% 200%;
     background-image: linear-gradient(45deg, var(--primary-color) 0%, var(--primary-dark) 25%, var(--primary-light) 50%, var(--primary-color) 100%);
     animation: gradientShift 3s ease infinite;
@@ -916,7 +906,7 @@ img {
     animation: none;
 }
 
-/* Animación para el gradiente desplazándose */
+/* Animation for the moving gradient */
 @keyframes gradientShift {
     0% {
         background-position: 0 50%;
@@ -935,7 +925,7 @@ textarea.form-control {
     line-height: 1.6;
 }
 
-/* Animaciones para elementos de contacto */
+/* Animations for contact elements */
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -1006,16 +996,29 @@ textarea.form-control {
     padding: 2rem 0;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
+/* Pseudo-element for glitter effect */
 .footer::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--gradient-1);
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0.5;
+    animation: shine 15s linear infinite;
+}
+
+@keyframes shine {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive Design Improvements */
@@ -1474,7 +1477,6 @@ html {
 
 .animate-on-scroll.animated {
     opacity: 1;
-    transform: translateY(0);
 }
 
 /* Añadir variaciones a la animación */
@@ -1517,12 +1519,15 @@ html {
 .hero-animate.delay-1.visible {
     animation-delay: 0.2s;
 }
+
 .hero-animate.delay-2.visible {
     animation-delay: 0.4s;
 }
+
 .hero-animate.delay-3.visible {
     animation-delay: 0.6s;
 }
+
 .hero-animate.delay-4.visible {
     animation-delay: 0.8s;
 }
@@ -1543,6 +1548,7 @@ html {
         flex-direction: column;
         gap: 1rem;
     }
+
     .info-item {
         min-width: 0;
         width: 100%;
@@ -1556,6 +1562,7 @@ html {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+
     .info-item {
         font-size: 1rem;
         white-space: normal;

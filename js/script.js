@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         social: document.querySelector('.social-icons'),
         image: document.querySelector('.hero-img')
     };
-    
+
     // Hide hero elements initially
     Object.values(heroElements).forEach(element => {
         if (element) {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Simulate minimum loading time (1.5 seconds)
     setTimeout(() => {
         loadingScreen.classList.add('fade-out');
-        
+
         // Animate hero elements after loading screen disappears
         setTimeout(() => {
             Object.values(heroElements).forEach((element, index) => {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Manejar el efecto de scroll para el header
-window.addEventListener('scroll', function () {
+window.addEventListener('pageshow', function () {
     const header = document.querySelector('.header');
     header.classList.toggle('scrolled', window.scrollY > 50);
 
@@ -54,37 +54,6 @@ window.addEventListener('scroll', function () {
     });
 });
 
-
-
-// Script para desplazamiento suave
-document.querySelectorAll('.nav-links a, .logo').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-});
-
-// También agregamos desplazamiento suave para los botones del hero section
-document.querySelectorAll('.hero-btns a').forEach(button => {
-    button.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-});
 
 // Menu Toggle
 const menuToggle = document.querySelector('.menu-toggle');
@@ -131,31 +100,31 @@ window.addEventListener('DOMContentLoaded', () => {
 // Contact Form Handling
 async function handleSubmit(event) {
     event.preventDefault();
-    
+
     // Get form elements
     const form = document.getElementById('contactForm');
     const submitButton = form.querySelector('button[type="submit"]');
     const buttonText = submitButton.querySelector('.button-text');
     const buttonLoader = submitButton.querySelector('.button-loader');
-    
+
     // Clear previous error messages
     clearErrors();
-    
+
     // Validate form
     if (!validateForm()) {
         return false;
     }
-    
+
     try {
         // Show loading state
         submitButton.disabled = true;
         buttonText.style.display = 'none';
         buttonLoader.style.display = 'inline-block';
-        
+
         // Get form data
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
-        
+
         // Send email using EmailJS
         await emailjs.send('Portfolio', 'Correo recibido', {
             from_name: data.name,
@@ -163,11 +132,11 @@ async function handleSubmit(event) {
             subject: data.subject,
             message: data.message
         });
-        
+
         // Show success notification
         showNotification('success', 'Message sent successfully!', 'Thank you for contacting me. I will get back to you soon.');
         form.reset();
-        
+
     } catch (error) {
         // Show error notification if something goes wrong
         showNotification('error', 'Error sending message', 'Please try again later.');
@@ -178,7 +147,7 @@ async function handleSubmit(event) {
         buttonText.style.display = 'inline-block';
         buttonLoader.style.display = 'none';
     }
-    
+
     return false;
 }
 
@@ -188,32 +157,32 @@ function validateForm() {
     const email = document.getElementById('email');
     const subject = document.getElementById('subject');
     const message = document.getElementById('message');
-    
+
     // Validate name
     if (name.value.trim().length < 2) {
         showError('name', 'Name must be at least 2 characters long');
         isValid = false;
     }
-    
+
     // Validate email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9_-]+\w[.]?[a-z0-9]+[@]\w+[.]\w{2,3}\w$/;
     if (!emailRegex.test(email.value.trim())) {
         showError('email', 'Please enter a valid email address');
         isValid = false;
     }
-    
+
     // Validate subject
     if (subject.value.trim().length < 3) {
         showError('subject', 'Subject must be at least 3 characters long');
         isValid = false;
     }
-    
+
     // Validate message
     if (message.value.trim().length < 10) {
         showError('message', 'Message must be at least 10 characters long');
         isValid = false;
     }
-    
+
     return isValid;
 }
 
@@ -250,14 +219,14 @@ function showNotification(type, title, message) {
             </button>
         </div>
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Add show class after a small delay for animation
     setTimeout(() => {
         notification.classList.add('show');
     }, 10);
-    
+
     // Add click event to close button
     const closeButton = notification.querySelector('.notification-close');
     closeButton.addEventListener('click', () => {
@@ -266,7 +235,7 @@ function showNotification(type, title, message) {
             notification.remove();
         }, 300);
     });
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentElement) {

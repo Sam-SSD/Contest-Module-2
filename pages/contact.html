@@ -6,21 +6,32 @@
     <meta name="description" content="Contact Samuel Serna Delgado, Java Backend and Fullstack developer.">
     <title>Contact | Samuel Serna Delgado</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 <body>
-<!-- Header de navegación principal -->
+<!-- Loading Screen -->
+<!--<div class="loading-screen">-->
+<!--    <div class="loader">-->
+<!--        <div class="loader-content">-->
+<!--            <i class="fas fa-code"></i>-->
+<!--            <span>Loading...</span>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!-- Main navigation header -->
 <header class="header">
     <div class="container">
         <nav class="navbar">
-            <a href="index.html" class="logo">Port<span>folio</span></a>
+            <a href="../index.html" class="logo">Port<span>folio</span></a>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -29,8 +40,8 @@
 </header>
 
 <main>
-    <!-- Sección de contacto -->
-    <section id="contact" class="contact section">
+    <!-- Contact section -->
+    <section id="contact" class="contact section animate-on-scroll">
         <div class="container">
             <div class="section-title animate-on-scroll">
                 <h2>Contact</h2>
@@ -38,7 +49,7 @@
             <div class="contact-content">
                 <div class="contact-info animate-on-scroll fade-left">
                     <h3>Looking for a Java Backend Developer?</h3>
-                    <div style="margin-bottom: 20px">
+                    <div>
                         <p>I'm open to new opportunities where I can contribute with my expertise in Java, SpringBoot, and SQL. Whether you need a robust backend solution or a complete fullstack application, let's discuss how I can help your team succeed.</p>
                     </div>
                     <div class="contact-details">
@@ -114,6 +125,11 @@
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script src="static/js/index.js"></script>
+<script>
+    (function() {
+        emailjs.init("7JKf9e5hLkbFcgg9V");
+    })();
+</script>
+<script src="/js/script.js"></script>
 </body>
 </html> 

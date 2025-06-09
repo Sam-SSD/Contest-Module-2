@@ -6,21 +6,23 @@
     <meta name="description" content="Portfolio projects of Samuel Serna Delgado, Java Backend and Fullstack developer.">
     <title>Portfolio | Samuel Serna Delgado</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 <body>
-<!-- Header de navegación principal -->
+
+<!-- Main navigation header -->
 <header class="header">
     <div class="container">
         <nav class="navbar">
-            <a href="index.html" class="logo">Port<span>folio</span></a>
+            <a href="../index.html" class="logo">Port<span>folio</span></a>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -29,8 +31,8 @@
 </header>
 
 <main>
-    <!-- Sección de portafolio de proyectos -->
-    <section id="portfolio" class="portfolio section">
+    <!-- Project portfolio section -->
+    <section id="portfolio" class="portfolio section animate-on-scroll">
         <div class="container">
             <div class="section-title animate-on-scroll">
                 <h2>My Projects</h2>
@@ -65,7 +67,7 @@
             </div>
             <div class="portfolio-grid">
                 <!-- Project 1 -->
-                <div class="portfolio-item animate-on-scroll fade-left">
+                <div class="portfolio-item fade-left">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80"
                          alt="Fullstack application with Spring Boot and modern frontend">
                     <div class="portfolio-overlay">
@@ -78,12 +80,12 @@
                     </div>
                 </div>
                 <!-- Project 2 -->
-                <div class="portfolio-item animate-on-scroll">
+                <div class="portfolio-item">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                          alt="RESTful API developed with Spring Boot, JPA and PostgreSQL">
                     <div class="portfolio-overlay">
                         <h3>Spring Boot API</h3>
-                        <p>RESTful API development using Spring Boot, JPA, and PostgreSQL with comprehensive documentation.</p>
+                        <p>RESTful API development using Spring Boot, JPA, and PostgreSQL.</p>
                         <div class="portfolio-links">
                             <a href="#"><i class="fas fa-link"></i></a>
                             <a href="#"><i class="fab fa-github"></i></a>
@@ -91,7 +93,7 @@
                     </div>
                 </div>
                 <!-- Project 3 -->
-                <div class="portfolio-item animate-on-scroll fade-right">
+                <div class="portfolio-item fade-right">
                     <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
                          alt="SQL database management system for enterprise applications">
                     <div class="portfolio-overlay">
@@ -114,6 +116,6 @@
         <p>&copy; 2025 My Portfolio. All rights reserved.</p>
     </div>
 </footer>
-<script src="static/js/index.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html> 

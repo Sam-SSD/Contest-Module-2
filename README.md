@@ -9,7 +9,7 @@ This is a personal web portfolio developed for the Performance Test — Module 2
 - `portfolio.html` — Portfolio of projects.
 - `contact.html` — Contact form and information.
 - `static/css/styles.css` — Global CSS styles.
-- `static/js/index.js` — JavaScript for interactivity.
+- `static/js/script.js` — JavaScript for interactivity.
 - `static/img/` — Images and graphic resources.
 
 ## Navigation
